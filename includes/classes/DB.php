@@ -15,10 +15,10 @@ class DB
     {
         $config = array(
             'driver'    => 'mysql', // Db driver
-            'host'      => 'localhost',
-            'database'  => 'task',
-            'username'  => 'root',
-            'password'  => 'root',
+            'host'      => DB_HOST,
+            'database'  => DB_NAME,
+            'username'  => DB_USER,
+            'password'  => DB_PASSWORD,
             'charset'   => 'utf8', // Optional
             'collation' => 'utf8_unicode_ci', // Optional
         );
