@@ -1,0 +1,29 @@
+.body {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.add-form {
+    margin-top: 20px;
+}
+
+.error {
+    color: red;
+}
+
+.error-auth {
+    color: red;
+    margin-top: 20px;
+}
+
+.sortable:hover {
+    cursor: pointer;
+}
+
+.name {
+    min-width: 172px;
+}
+
+.col_status {
+    min-width: 135px;
+}
