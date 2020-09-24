@@ -75,6 +75,9 @@ class Controller
      */
     public function update ($id)
     {
+        if (!Auth::isAuthorized()) {
+            Auth::redirectToLogin();
+        }
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if (empty($_POST['text'])) {
                 $errors["text"] = "Текст задачи не указан.";
@@ -88,9 +91,6 @@ class Controller
                 }
             }
         } else {
-            if (!Auth::isAuthorized()) {
-                Auth::redirectToLogin();
-            }
             $connection = DB::getConnection();
             $task = $connection->table('tasks')->find($id);
             $tpl = new Template('./Views/');
